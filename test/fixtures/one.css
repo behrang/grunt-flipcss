@@ -1,0 +1,21 @@
+body {
+  direction: ltr;
+}
+
+form #container .x .y.z {
+  float: left;
+  text-align: right;
+  background: url(sample-left.jpg);
+}
+
+h1, h2 {
+  margin: 0 10px 20px 30px;
+  padding: 10px 20px 30px 40px;
+  background-image: url("sample-ltr.jpg");
+}
+
+h3 {
+  margin: 0 10px;
+  padding: 10px 20px 30px
+  cursor: nw-resize;
+}

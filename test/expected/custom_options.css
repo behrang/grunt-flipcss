@@ -1,0 +1,25 @@
+body {
+  direction: rtl;
+}
+
+form #container .x .y.z {
+  float: right;
+  text-align: left;
+  background: url(sample-left.jpg);
+}
+
+h1, h2 {
+  margin: 0 30px 20px 10px;
+  padding: 10px 40px 30px 20px;
+  background-image: url("sample-rtl.jpg");
+}
+
+h3 {
+  margin: 0 10px;
+  padding: 10px 20px 30px
+  cursor: ne-resize;
+}
+
+h4 {
+  float: left;
+}
