@@ -53,9 +53,10 @@ In this example, a single file is flipped.
 ```js
 grunt.initConfig({
   flipcss: {
-    options: {},
-    files: {
-      'css/main-rtl.css': 'css/main.css'
+    app: {
+      files: {
+        'css/main-rtl.css': 'css/main.css'
+      }
     }
   }
 })
@@ -67,10 +68,11 @@ In this example, multiple files are flipped.
 ```js
 grunt.initConfig({
   flipcss: {
-    options: {},
-    files: {
-      'css/main-rtl.css': 'css/main.css',
-      'css/theme-rtl.css': 'css/theme.css'
+    app: {
+      files: {
+        'css/main-rtl.css': 'css/main.css',
+        'css/theme-rtl.css': 'css/theme.css'
+      }
     }
   }
 })
@@ -82,9 +84,10 @@ In this example, multiple files are flipped and concatenated to a single file.
 ```js
 grunt.initConfig({
   flipcss: {
-    options: {},
-    files: {
-      'css/rtl.css': ['main.css', 'theme.css']
+    app: {
+      files: {
+        'css/rtl.css': ['main.css', 'theme.css']
+      }
     }
   }
 })
@@ -97,20 +100,22 @@ In this example, files in two directories are flipped.
 grunt.initConfig({
   flipcss: {
     options: {},
-    files: [
-      {
-        expand: true,
-        cwd: 'build/css',
-        src: '*.css',
-        dest: 'build/app/css'
-      },
-      {
-        expand: true,
-        cwd: 'build/theme',
-        src: '*.css',
-        dest: 'build/app/theme'
-      }
-    ]
+    app: {
+      files: [
+        {
+          expand: true,
+          cwd: 'build/css',
+          src: '*.css',
+          dest: 'build/app/css'
+        },
+        {
+          expand: true,
+          cwd: 'build/theme',
+          src: '*.css',
+          dest: 'build/app/theme'
+        }
+      ]
+    }
   }
 })
 ```
@@ -124,8 +129,10 @@ grunt.initConfig({
     options: {
       exclude: ['fixUrlLtrRtl', 'fixUrlLeftRight']
     },
-    files: {
-      'css/main-rtl.css': 'css/main.css'
+    app: {
+      files: {
+        'css/main-rtl.css': 'css/main.css'
+      }
     }
   }
 })
