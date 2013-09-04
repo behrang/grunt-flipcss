@@ -2,6 +2,9 @@
 
 > Flips LTR-based CSS files to RTL, or the opposite.
 
+[![Dependency Status](https://gemnasium.com/behrang/grunt-flipcss.png)](https://gemnasium.com/behrang/grunt-flipcss)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/behrang/grunt-flipcss/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
 
@@ -140,7 +143,3 @@ grunt.initConfig({
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/behrang/grunt-flipcss/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
