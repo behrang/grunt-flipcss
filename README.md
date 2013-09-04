@@ -2,6 +2,7 @@
 
 > Flips LTR-based CSS files to RTL, or the opposite.
 
+[![Build Status](https://travis-ci.org/behrang/grunt-flipcss.png?branch=master)](https://travis-ci.org/behrang/grunt-flipcss)
 [![Dependency Status](https://gemnasium.com/behrang/grunt-flipcss.png)](https://gemnasium.com/behrang/grunt-flipcss)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/behrang/grunt-flipcss/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
