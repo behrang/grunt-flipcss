@@ -8,14 +8,17 @@
 
 'use strict';
 
-var inverter = require('inverter');
+var flipcss = require('flipcss');
 
 module.exports = function(grunt) {
 
   grunt.registerMultiTask('flipcss', 'Flips CSS files.', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      exclude: []
+      warnings: false,
+      flipPseudo: false,
+      flipUrls: true,
+      flipSelectors: true
     });
 
     // Iterate over all specified file groups.
@@ -35,7 +38,7 @@ module.exports = function(grunt) {
       }).join(grunt.util.linefeed);
 
       // Flip file.
-      src = inverter.invert(src, options);
+      src = flipcss.flip(src, options.warnings, options.flipPseudo, options.flipUrls, options.flipSelectors);
 
       // Write the destination file.
       grunt.file.write(f.dest, src);

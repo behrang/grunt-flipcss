@@ -24,7 +24,7 @@ grunt.loadNpmTasks('grunt-flipcss');
 ## The "flipcss" task
 
 ### Overview
-This plugin is using [inverter](https://github.com/coolony/inverter).
+This plugin is using [flipcss](https://github.com/operasoftware/flipcss).
 
 In your project's Gruntfile, add a section named `flipcss` to the data object passed into `grunt.initConfig()`.
 
@@ -33,6 +33,10 @@ grunt.initConfig({
   flipcss: {
     options: {
       // Task-specific options go here.
+      warnings: false,
+      flipPseudo: false,
+      flipUrls: true,
+      flipSelectors: true
     },
     your_target: {
       // Target-specific file lists and/or options go here.
@@ -43,15 +47,34 @@ grunt.initConfig({
 
 ### Options
 
-#### options.exclude
-Type: `String[]`
-Default value: `[]`
+#### options.warnings
+Type: `boolean`
+Default value: `false`
 
-A list of filter names to exclude when flipping. Read more at [coolony/inverter](https://github.com/coolony/inverter).
+If output warnings should be printed to console.
+
+#### options.flipPseudo
+Type: `boolean`
+Default value: `false`
+
+If :before and :after pseudo selectors should be flipped.
+
+#### options.flipUrls
+Type: `boolean`
+Default value: `true`
+
+If words left and right inside url() should be flipped.
+
+#### options.flipSelectors
+Type: `boolean`
+Default value: `true`
+
+If words left and right inside selectors should be flipped.
+
 
 ### Usage Examples
 
-#### Filp one file
+#### Flip one file
 In this example, a single file is flipped.
 
 ```js
@@ -66,7 +89,7 @@ grunt.initConfig({
 })
 ```
 
-#### Filp multiple files
+#### Flip multiple files
 In this example, multiple files are flipped.
 
 ```js
@@ -82,7 +105,7 @@ grunt.initConfig({
 })
 ```
 
-#### Filp multiple files to one file
+#### Flip multiple files to one file
 In this example, multiple files are flipped and concatenated to a single file.
 
 ```js
@@ -97,7 +120,7 @@ grunt.initConfig({
 })
 ```
 
-#### Filp multiple file groups to multiple files
+#### Flip multiple file groups to multiple files
 In this example, files in two directories are flipped.
 
 ```js
@@ -119,24 +142,6 @@ grunt.initConfig({
           dest: 'build/app/theme'
         }
       ]
-    }
-  }
-})
-```
-
-#### Custom Options
-In this example, replacement of ltr/rtl and left/right in urls is excluded.
-
-```js
-grunt.initConfig({
-  flipcss: {
-    options: {
-      exclude: ['fixUrlLtrRtl', 'fixUrlLeftRight']
-    },
-    app: {
-      files: {
-        'css/main-rtl.css': 'css/main.css'
-      }
     }
   }
 })

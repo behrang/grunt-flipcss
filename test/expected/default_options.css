@@ -1,5 +1,5 @@
 body {
-  direction: rtl;
+  direction: ltr;
 }
 
 form #container .x .y.z {
@@ -11,7 +11,7 @@ form #container .x .y.z {
 h1, h2 {
   margin: 0 30px 20px 10px;
   padding: 10px 40px 30px 20px;
-  background-image: url("sample-rtl.jpg");
+  background-image: url("sample-ltr.jpg");
 }
 
 h3 {

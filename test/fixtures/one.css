@@ -17,5 +17,5 @@ h1, h2 {
 h3 {
   margin: 0 10px;
   padding: 10px 20px 30px
-  cursor: nw-resize;
+  cursor: ne-resize;
 }

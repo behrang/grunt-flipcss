@@ -35,15 +35,31 @@ module.exports = function(grunt) {
         },
         files: {
           'tmp/default_options.css': ['test/fixtures/one.css', 'test/fixtures/two.css'],
-        },
+        }
       },
-      custom_options: {
+      flipPseudo: {
         options: {
-          exclude: ['fixUrlLeftRight']
+          flipPseudo: true
         },
         files: {
-          'tmp/custom_options.css': ['test/fixtures/one.css', 'test/fixtures/two.css'],
+          'tmp/flipPseudo.css': 'test/fixtures/flipPseudo.css',
+        }
+      },
+      flipUrls: {
+        options: {
+          flipUrls: true
         },
+        files: {
+          'tmp/flipUrls.css': 'test/fixtures/flipUrls.css',
+        }
+      },
+      flipSelectors: {
+        options: {
+          flipSelectors: true
+        },
+        files: {
+          'tmp/flipSelectors.css': 'test/fixtures/flipSelectors.css',
+        }
       },
     },
 

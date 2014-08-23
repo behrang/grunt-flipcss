@@ -23,10 +23,6 @@ var grunt = require('grunt');
 */
 
 exports.flipcss = {
-  setUp: function(done) {
-    // setup here if necessary
-    done();
-  },
   default_options: function(test) {
     test.expect(1);
 
@@ -36,13 +32,31 @@ exports.flipcss = {
 
     test.done();
   },
-  custom_options: function(test) {
+  flipPseudo: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/custom_options.css');
-    var expected = grunt.file.read('test/expected/custom_options.css');
-    test.equal(actual, expected, 'should not replace left with right and vice versa');
+    var actual = grunt.file.read('tmp/flipPseudo.css');
+    var expected = grunt.file.read('test/expected/flipPseudo.css');
+    test.equal(actual, expected, 'should flip :before and :after pseudo classes.');
 
     test.done();
   },
+  flipUrls: function(test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/flipUrls.css');
+    var expected = grunt.file.read('test/expected/flipUrls.css');
+    test.equal(actual, expected, 'should flip right and left in url().');
+
+    test.done();
+  },
+  flipSelectors: function(test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/flipSelectors.css');
+    var expected = grunt.file.read('test/expected/flipSelectors.css');
+    test.equal(actual, expected, 'should flip right and left in selectors.');
+
+    test.done();
+  }
 };
