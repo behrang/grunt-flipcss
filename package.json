@@ -1,7 +1,7 @@
 {
   "name": "grunt-flipcss",
   "description": "Flips LTR-based CSS files to RTL, or the opposite.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "homepage": "https://github.com/behrang/grunt-flipcss",
   "author": {
     "name": "Behrang Noruzi Niya",
