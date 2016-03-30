@@ -58,5 +58,12 @@ exports.flipcss = {
     test.equal(actual, expected, 'should flip right and left in selectors.');
 
     test.done();
+  },
+  cleanDirection: function(test) {
+    test.expect(1);
+
+    //think just need something like a jasmine spy to see if clean function has been run with option.cleanDirection
+
+    test.done();
   }
 };
