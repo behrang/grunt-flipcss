@@ -18,7 +18,8 @@ module.exports = function(grunt) {
       warnings: false,
       flipPseudo: false,
       flipUrls: true,
-      flipSelectors: true
+      flipSelectors: true,
+      cleanDirection: 'rtl'
     });
 
     // Iterate over all specified file groups.
@@ -39,6 +40,11 @@ module.exports = function(grunt) {
 
       // Flip file.
       src = flipcss.flip(src, options.warnings, options.flipPseudo, options.flipUrls, options.flipSelectors);
+
+      //clean
+      if (options.cleanDirection) {
+        src = flipcss.clean(src, options.cleanDirection);
+      }
 
       // Write the destination file.
       grunt.file.write(f.dest, src);
