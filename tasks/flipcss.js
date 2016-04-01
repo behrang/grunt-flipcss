@@ -19,7 +19,7 @@ module.exports = function(grunt) {
       flipPseudo: false,
       flipUrls: true,
       flipSelectors: true,
-      cleanDirection: 'rtl'
+      cleanDirection: null
     });
 
     // Iterate over all specified file groups.
