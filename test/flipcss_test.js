@@ -62,7 +62,9 @@ exports.flipcss = {
   cleanDirection: function(test) {
     test.expect(1);
 
-    //think just need something like a jasmine spy to see if clean function has been run with option.cleanDirection
+    var actual = grunt.file.read('tmp/cleanDirection.css');
+    var expected = grunt.file.read('test/expected/cleanDirection.css');
+    test.equal(actual, expected, 'should run flipcss.clean');
 
     test.done();
   }
