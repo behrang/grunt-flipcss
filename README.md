@@ -71,6 +71,14 @@ Default value: `true`
 
 If words left and right inside selectors should be flipped.
 
+#### options.cleanDirection
+Type: `string`
+Default value: `null`
+Possible values: `rtl` or `ltr`
+
+see: https://github.com/oyvindeh/flipcss#what-is-done-when-cleaning
+
+
 
 ### Usage Examples
 
