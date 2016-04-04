@@ -61,6 +61,14 @@ module.exports = function(grunt) {
           'tmp/flipSelectors.css': 'test/fixtures/flipSelectors.css',
         }
       },
+      cleanDirection: {
+        options: {
+          cleanDirection: 'rtl'
+        },
+        files: {
+          'tmp/cleanDirection.css': 'test/fixtures/cleanDirection.css',
+        }
+      }
     },
 
     // Unit tests.
