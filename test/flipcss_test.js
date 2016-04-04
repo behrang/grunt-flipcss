@@ -58,5 +58,14 @@ exports.flipcss = {
     test.equal(actual, expected, 'should flip right and left in selectors.');
 
     test.done();
+  },
+  cleanDirection: function(test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/cleanDirection.css');
+    var expected = grunt.file.read('test/expected/cleanDirection.css');
+    test.equal(actual, expected, 'should run flipcss.clean');
+
+    test.done();
   }
 };
